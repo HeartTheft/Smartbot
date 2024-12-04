@@ -8,7 +8,7 @@ async def is_user_fsub(bot , message):
     user_id = message.from_user.id
     chat_id = message.chat.id
     fSub = await db.getFsub(chat_id)
-    if fSub is None:
+    fSub = fSub.id
         return True
     #now checking if user in fsub chat id or not
     else:
